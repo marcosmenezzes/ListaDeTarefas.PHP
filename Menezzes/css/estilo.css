@@ -1,0 +1,387 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --background-dark: #2d3436;
+    --text-light: #dfe6e9;
+    --text-dark: #2d3436;
+    --success-color: #00b894;
+    --warning-color: #f03;
+    --danger-color: #dc8;
+}
+
+body {
+    background-color: #f5f6fa;
+    color: var(--text-dark);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+}
+
+.menu {
+    margin-bottom: 2rem;
+}
+
+.app {
+    margin-top: 2rem;
+}
+
+.pagina {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: none;
+}
+
+li.list-group-item {
+    border: none;
+    margin-bottom: 0.5rem;
+    border-radius: 8px !important;
+    transition: all 0.3s ease;
+}
+
+li.list-group-item.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+li.list-group-item.active a {
+    color: white;
+}
+
+li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+h4 {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.tarefa {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.tarefa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.tarefa .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin: 0 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.tarefa .btn:hover {
+    transform: translateY(-2px);
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.85em;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(108,92,231,0.25);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Estilos dos botões de ação */
+.btn-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+.btn-action.delete {
+    background-color: #ffefef;
+    color: var(--danger-color);
+}
+
+.btn-action.delete:hover {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-action.edit {
+    background-color: #e3f2fd;
+    color: #2196f3;
+}
+
+.btn-action.edit:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn-action.check {
+    background-color: #e8f5e9;
+    color: var(--success-color);
+}
+
+.btn-action.check:hover {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-new-task {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108,92,231,0.3);
+}
+
+.btn-new-task:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(108,92,231,0.4);
+}
+
+/* Estilos para os formulários de autenticação */
+.auth-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 2rem 1rem;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 2.5rem;
+    max-width: 400px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.auth-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+}
+
+.auth-title {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.auth-subtitle {
+    color: var(--text-dark);
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+}
+
+.auth-form .form-control {
+    background-color: #f8f9fa;
+    border: 2px solid transparent;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.auth-form .form-control:focus {
+    background-color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(108,92,231,0.15);
+}
+
+.auth-form .btn-auth {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.auth-form .btn-auth:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108,92,231,0.4);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.auth-footer a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* Botões de ação flutuantes */
+.floating-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.btn-float {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(108,92,231,0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-float:hover {
+    transform: translateY(-5px) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(108,92,231,0.6);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarefa {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .menu {
+        margin-bottom: 1.5rem;
+    }
+    
+    .tarefa {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tarefa .btn-group {
+        margin-top: 1rem;
+    }
+    
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar-brand {
+        margin-bottom: 1rem;
+    }
+}
