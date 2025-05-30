@@ -16,9 +16,9 @@
     // Definindo a ação para recuperar todas as tarefas
     $acao = 'recuperar';
     
-    require_once "../ini_lista_tarefas/tarefa_class.php";
-    require_once "../ini_lista_tarefas/conexao.php";
-    require_once "../ini_lista_tarefas/tarefa_service_crud.php";
+    require_once "../Menezzes/tarefa_class.php";
+    require_once "../Menezzes/conexao.php";
+    require_once "../Menezzes/tarefa_service_crud.php";
 
     try {
         $conexao = new conexaoClass();
@@ -146,19 +146,19 @@
         <script>
             function marcarRealizada(id) {
                 if(confirm('Tem certeza que deseja marcar esta tarefa como realizada?')) {
-                    window.location.href = '../ini_lista_tarefas/recebe_tarefa.php?acao=marcarRealizada&id=' + id;
+                    window.location.href = '../Menezzes/recebe_tarefa.php?acao=marcarRealizada&id=' + id;
                 }
             }
 
             function marcarPendente(id) {
                 if(confirm('Tem certeza que deseja marcar esta tarefa como pendente?')) {
-                    window.location.href = '../ini_lista_tarefas/recebe_tarefa.php?acao=marcarPendente&id=' + id;
+                    window.location.href = '../Menezzes/recebe_tarefa.php?acao=marcarPendente&id=' + id;
                 }
             }
 
             function removerTarefa(id) {
                 if(confirm('Tem certeza que deseja remover esta tarefa?')) {
-                    window.location.href = '../ini_lista_tarefas/recebe_tarefa.php?acao=remover&id=' + id;
+                    window.location.href = '../Menezzes/recebe_tarefa.php?acao=remover&id=' + id;
                 }
             }
         </script>

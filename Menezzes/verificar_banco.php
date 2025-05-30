@@ -1,5 +1,5 @@
 <?php
-require_once "../ini_lista_tarefas/conexao.php";
+require_once "../Menezzes/conexao.php";
 
 try {
     $conexao = new conexaoClass();

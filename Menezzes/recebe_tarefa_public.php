@@ -30,7 +30,7 @@
     }
     
     // Importa o arquivo principal que processa as tarefas
-    require_once "../ini_lista_tarefas/recebe_tarefa.php";
+    require_once "../Menezzes/recebe_tarefa.php";
 
     // Se ocorreu algum erro na execução, redireciona com mensagem de erro
     if (isset($error)) {

@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require_once "INI_LISTA_TAREFAS/conexao.php";
-require_once "INI_LISTA_TAREFAS/usuario_class.php";
-require_once "INI_LISTA_TAREFAS/usuario_service_crud.php";
+require_once "../Menezzes/conexao.php";
+require_once "../Menezzes/usuario_class.php";
+require_once "../Menezzes/usuario_service_crud.php";
 
 $usuario = new usuarioClass();
 $usuario->__set('nome', $_POST['usuario']);

@@ -6,13 +6,13 @@
 	
 	// Verificação de autenticação
 	if(!isset($_SESSION['id'])) {
-		header('Location: ../ini_lista_tarefas_public/login.php');
+		header('Location: ../Menezzes/login.php');
 		exit();
 	}
 	
-	require "../ini_lista_tarefas/tarefa_class.php";
-	require "../ini_lista_tarefas/conexao.php";
-	require "../ini_lista_tarefas/tarefa_service_crud.php";
+	require "../Menezzes/tarefa_class.php";
+	require "../Menezzes/conexao.php";
+	require "../Menezzes/tarefa_service_crud.php";
 
 	$acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
@@ -37,16 +37,16 @@
 			
 			if($crud_tarefa_instanciada->inserir()) {
 				if(isset($_GET['pagina']) && $_GET['pagina'] == 'index') {
-					header('Location: ../ini_lista_tarefas_public/index.php?sucesso=1');
+					header('Location: ../Menezzes/index.php?sucesso=1');
 				} else {
-					header('Location: ../ini_lista_tarefas_public/nova_tarefa.php?inclusao=1');
+					header('Location: ../Menezzes/nova_tarefa.php?inclusao=1');
 				}
 			} else {
 				throw new Exception('Erro ao inserir tarefa');
 			}
 		} catch (Exception $e) {
 			error_log('Erro no processo de inserção: ' . $e->getMessage());
-			header('Location: ../ini_lista_tarefas_public/nova_tarefa.php?erro=1');
+			header('Location: ../Menezzes/nova_tarefa.php?erro=1');
 		}
 		exit();
 	} 
@@ -84,13 +84,13 @@
 			$crud_tarefa_instanciada->remover();
 
 			if(isset($_GET['pagina']) && $_GET['pagina'] == 'index') {
-				header('Location: ../ini_lista_tarefas_public/index.php');
+				header('Location: ../Menezzes/index.php');
 			} else {
-				header('Location: ../ini_lista_tarefas_public/todas_tarefas.php');
+				header('Location: ../Menezzes/todas_tarefas.php');
 			}
 		} catch (Exception $e) {
 			error_log('Erro ao remover tarefa: ' . $e->getMessage());
-			header('Location: ' . (isset($_GET['pagina']) && $_GET['pagina'] == 'index' ? '../ini_lista_tarefas_public/index.php' : '../ini_lista_tarefas_public/todas_tarefas.php') . '?erro=1');
+			header('Location: ' . (isset($_GET['pagina']) && $_GET['pagina'] == 'index' ? '../Menezzes/index.php' : '../Menezzes/todas_tarefas.php') . '?erro=1');
 		}
 		exit();
 	} 
@@ -112,13 +112,13 @@
 			}
 
 			if(isset($_GET['pagina']) && $_GET['pagina'] == 'index') {
-				header('Location: ../ini_lista_tarefas_public/index.php');
+				header('Location: ../Menezzes/index.php');
 			} else {
-				header('Location: ../ini_lista_tarefas_public/todas_tarefas.php');
+				header('Location: ../Menezzes/todas_tarefas.php');
 			}
 		} catch (Exception $e) {
 			error_log('Erro ao atualizar status da tarefa: ' . $e->getMessage());
-			header('Location: ' . (isset($_GET['pagina']) && $_GET['pagina'] == 'index' ? '../ini_lista_tarefas_public/index.php' : '../ini_lista_tarefas_public/todas_tarefas.php') . '?erro=1');
+			header('Location: ' . (isset($_GET['pagina']) && $_GET['pagina'] == 'index' ? '../Menezzes/index.php' : '../Menezzes/todas_tarefas.php') . '?erro=1');
 		}
 		exit();
 	}
